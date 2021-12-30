@@ -30,3 +30,13 @@
     2. 代理 IP：process_exception:return request
 4. 拦截响应：
     1. 篡改响应数据和响应对象
+# CrawlScrapy
+一个 Spider 的子类，进行全站数据爬取
+## 全站数据爬取方式
+1. 基于 Spider 手动请求
+2. 基于 CrawlSpider
+## 使用
+1. 创建工程：scrapy startproject ${scrapy_name}
+2. 创建爬虫文件：scrapy genspider -t crawl ${spider_name} ${domain}
+3. 连接提取器，根据指定的规则(allow)进行指定连接的爬取
+4. 规则解析器：将连接提取器提取到的连接进行解析(call_back)
